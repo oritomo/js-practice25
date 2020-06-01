@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>varについて</title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    {
+      var barca = 'メッシ';
+      console.log(barca); //メッシ
+
+      var barca = 'イニエスタ'
+      console.log(barca); //イニエスタ
+
+      function barcelona() {
+        console.log(barca); //undefined
+        var barca = 'プジョル';
+        console.log(barca); //プジョル
+      }
+      barcelona();
+
+      for (var i = 0; i < 3; i++) {
+        console.log('バロンドール');
+      }
+      console.log(i);//3
+      
+      /*
+      　varは同じ名前で再定義できる。
+      
+        JavaScriptでは、関数内のどこにでもvar文を使用して変数を宣言することができる。
+        そして、これらの変数は関数内のいかなる場所で宣言されたとしても、その関数の先頭で宣言されたのと同じように動作する。
+        なので関数で使用するローカル変数がある時は関数の先頭で宣言することが必要。
+
+        また、varで指定した変数はたとえ関数の中にあってもアクセスできる(letではできず、エラーになる)
+
+      */
+    }
+  </script>
+</body>
+
+</html>
